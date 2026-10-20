@@ -1,5 +1,3 @@
-"use client";
-
 import type { Product } from "@/data/types";
 
 type Fbq = (...args: unknown[]) => void;
@@ -21,27 +19,26 @@ export const TIKTOK_PIXEL_ID = process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || "";
 const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"] as const;
 const UTM_STORAGE_KEY = "ayora_utm";
 
-/** Saves UTM tags from the current URL. Called on every page load; a new campaign overwrites the old one. */
-export function captureUtm(): void {
-  try {
-    const params = new URLSearchParams(window.location.search);
-    const utm: Record<string, string> = {};
-    for (const key of UTM_KEYS) {
-      const value = params.get(key);
-      if (value) utm[key] = value;
-    }
-    if (Object.keys(utm).length > 0) {
-      sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(utm));
-    }
-  } catch {
-    // sessionStorage may be blocked (private mode, in-app browsers)
-  }
-}
-
+/**
+ * Returns UTM tags for this session. UTM tags in the current URL are saved
+ * first (a new campaign overwrites the old one), so the first event on a
+ * landing page already carries them.
+ */
 export function getUtm(): Record<string, string> {
   try {
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl: Record<string, string> = {};
+    for (const key of UTM_KEYS) {
+      const value = params.get(key);
+      if (value) fromUrl[key] = value;
+    }
+    if (Object.keys(fromUrl).length > 0) {
+      sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(fromUrl));
+      return fromUrl;
+    }
     return JSON.parse(sessionStorage.getItem(UTM_STORAGE_KEY) || "{}");
   } catch {
+    // sessionStorage may be blocked (private mode, some in-app browsers)
     return {};
   }
 }
@@ -50,16 +47,17 @@ function safe(fn: () => void) {
   try {
     fn();
   } catch {
-    // never let analytics break the page
+    // analytics must never break the page
   }
 }
 
 export function trackPageView(): void {
-  safe(() => window.fbq?.("track", "PageView", getUtm()));
+  const utm = getUtm();
+  safe(() => window.fbq?.("track", "PageView", utm));
   safe(() => window.ttq?.page());
 }
 
-function productParams(product: Product) {
+function metaParams(product: Product) {
   return {
     value: product.price,
     currency: "KZT",
@@ -87,12 +85,12 @@ function tiktokParams(product: Product) {
 
 export function trackViewContent(product: Product): void {
   const utm = getUtm();
-  safe(() => window.fbq?.("track", "ViewContent", { ...productParams(product), ...utm }));
+  safe(() => window.fbq?.("track", "ViewContent", { ...metaParams(product), ...utm }));
   safe(() => window.ttq?.track("ViewContent", { ...tiktokParams(product), ...utm }));
 }
 
 export function trackKaspiClick(product: Product): void {
   const utm = getUtm();
-  safe(() => window.fbq?.("track", "InitiateCheckout", { ...productParams(product), num_items: 1, ...utm }));
+  safe(() => window.fbq?.("track", "InitiateCheckout", { ...metaParams(product), num_items: 1, ...utm }));
   safe(() => window.ttq?.track("ClickButton", { ...tiktokParams(product), ...utm }));
 }

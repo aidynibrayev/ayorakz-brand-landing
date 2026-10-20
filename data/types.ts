@@ -16,8 +16,8 @@ export type Faq = { q: string; a: string };
 export type ProductImage = {
   src: string;
   alt: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 };
 
 export type ProductVideo = {
@@ -29,6 +29,7 @@ export type Product = {
   slug: string;
   sku: string;
   name: string;
+  hero: ProductImage;
   /** Pain-point headline shown above the name in the hero. */
   hook: string;
   shortDescription: string;
