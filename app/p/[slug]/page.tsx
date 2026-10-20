@@ -78,7 +78,6 @@ export default async function ProductPage({ params }: PageProps<'/p/[slug]'>) {
     }),
   };
 
-  const isFanHeater = product.slug === 'fan-heater';
 
   return (
     <>
@@ -89,8 +88,24 @@ export default async function ProductPage({ params }: PageProps<'/p/[slug]'>) {
       />
 
       <main>
+        {/* Mobile header: solid bar above the photo so it never clashes with text in the image */}
+        <header className="sticky top-0 z-30 flex h-14 items-center justify-center border-b border-ink/5 bg-cream/90 px-4 backdrop-blur-md md:hidden">
+          <Link
+            href="/"
+            aria-label="Назад к каталогу"
+            className="absolute left-3 grid size-10 place-items-center rounded-full text-ink transition active:scale-95 active:bg-ink/5"
+          >
+            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden>
+              <path d="M12.5 4.5 7 10l5.5 5.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
+          <Link href="/" aria-label="AYORA — главная">
+            <Logo className="h-[18px] w-auto text-ink" />
+          </Link>
+        </header>
+
         {/* 1. Hero */}
-        <section className="relative flex min-h-[100vh] flex-col md:mx-auto md:grid md:min-h-0 md:max-w-5xl md:grid-cols-2 md:items-center md:gap-12 md:px-5 md:py-16">
+        <section className="relative flex min-h-[calc(100svh-56px)] flex-col md:mx-auto md:grid md:min-h-0 md:max-w-5xl md:grid-cols-2 md:items-center md:gap-12 md:px-5 md:py-16">
           <Link href="/" aria-label="AYORA — главная">
             <div className="absolute inset-0">
               <Image
@@ -110,15 +125,6 @@ export default async function ProductPage({ params }: PageProps<'/p/[slug]'>) {
             </div>
           </Link>
 
-          {!isFanHeater && (
-            <Link
-              href="/"
-              aria-label="AYORA — главная"
-              className="absolute left-5 top-5 z-10 md:hidden"
-            >
-              <Logo className="h-5 w-auto text-ink" />
-            </Link>
-          )}
 
           <div className="relative z-10 mt-auto px-5 pb-8 md:mt-0 md:px-0 md:pb-0">
             <Link href="/" aria-label="AYORA — главная" className="mb-10 hidden md:inline-block">
