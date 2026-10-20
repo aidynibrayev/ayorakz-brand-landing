@@ -40,14 +40,14 @@ export default function Home() {
             </p>
             <a
               href={site.kaspiShopUrl}
-              className="mt-5 w-3/4 flex min-h-14 items-center justify-between rounded-2xl bg-red-600 text-white px-5 text-[17px] font-bold transition"
+              className="mt-5 w-full flex min-h-14 items-center justify-between rounded-2xl bg-red-600 text-white px-5 text-[17px] font-bold transition"
             >
               {t.footerShop}
               <span aria-hidden className='ml-4'>→</span>
             </a>
             <Link
               href="#catalog"
-              className="mt-4 w-3/4 inline-flex min-h-14 items-center justify-between gap-3 rounded-2xl bg-ink px-7 text-[17px] font-bold text-white"
+              className="mt-4 w-full inline-flex min-h-14 items-center justify-between gap-3 rounded-2xl bg-ink px-7 text-[17px] font-bold text-white"
             >
               {t.homeHeroCta}
               <span aria-hidden>↓</span>

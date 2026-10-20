@@ -16,7 +16,7 @@ const ru = {
   brandDescription: 'AYORA бытовая техника для вашего дома. Покупайте на Kaspi в рассрочку 0-0-12.',
   homeHeroTitle: 'Тепло и уют в каждом доме',
   homeHeroText: 'Техника для дома AYORA с рассрочкой Kaspi.',
-  homeHeroCta: 'Смотреть товары',
+  homeHeroCta: 'Смотреть все товары',
   catalogTitle: 'Товары',
   buyOnKaspi: 'Купить на Kaspi',
   installmentPrefix: 'или',

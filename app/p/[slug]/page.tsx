@@ -90,7 +90,7 @@ export default async function ProductPage({ params }: PageProps<'/p/[slug]'>) {
 
       <main>
         {/* 1. Hero */}
-        <section className="relative flex min-h-[70vh] flex-col md:mx-auto md:grid md:min-h-0 md:max-w-5xl md:grid-cols-2 md:items-center md:gap-12 md:px-5 md:py-16">
+        <section className="relative flex min-h-[100vh] flex-col md:mx-auto md:grid md:min-h-0 md:max-w-5xl md:grid-cols-2 md:items-center md:gap-12 md:px-5 md:py-16">
           <Link href="/" aria-label="AYORA — главная">
             <div className="absolute inset-0">
               <Image
@@ -143,6 +143,12 @@ export default async function ProductPage({ params }: PageProps<'/p/[slug]'>) {
               product={product}
               className="mt-6 w-full md:w-auto md:min-w-80"
             />
+            <Link
+              href="/"
+              className="mt-4 w-full inline-flex min-h-14 items-center justify-center gap-3 rounded-2xl bg-ink px-7 text-[17px] font-bold text-white"
+            >
+              {t.homeHeroCta}
+            </Link>
           </div>
         </section>
 

@@ -23,7 +23,7 @@ export function StickyBuyBar({ product, watchId }: { product: Product; watchId: 
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 px-4 pb-[max(12px,env(safe-area-inset-bottom))] pt-3 transition-transform duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-3 z-40 px-4 pb-[max(12px,env(safe-area-inset-bottom))] pt-3 transition-transform duration-300 md:hidden ${
         visible ? "translate-y-0" : "pointer-events-none translate-y-full"
       }`}
       aria-hidden={!visible}
