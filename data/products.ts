@@ -19,7 +19,7 @@ export const products: Product[] = [
     shortDescription:
       'Греет комнату и увлажняет воздух одновременно. Живое пламя камина — без дров и дыма.',
     price: 22990,
-    kaspiUrl: 'https://l.kaspi.kz/shop/HwN9hYUgxrh4xHV',
+    kaspiUrl: 'https://kaspi.kz/shop/p/teploventiljator-ayora-ay-900-chernyi-171878025',
     rating: 5,
     reviewsCount: 69,
     hero: { src: '/products/fan-heater/hero.png', alt: 'Обогреватель AYORA 2в1 с эффектом камина' },
@@ -84,7 +84,7 @@ export const products: Product[] = [
     hook: 'Пыль, запахи, смог - очиститель уберёт',
     shortDescription: 'Очищает воздух от пыли, смога и запахов. Управление с телефона через Wi-Fi, работает тихо можно оставить на ночь.',
     price: 64990,
-    kaspiUrl: 'https://l.kaspi.kz/shop/BwD43frT5HVpwdV',
+    kaspiUrl: 'https://kaspi.kz/shop/p/ochistitel-vozduha-ayora-ay-700-belyi-172465349',
     rating: 5,
     reviewsCount: 77,
     hero: { src: '/products/air-purifier/hero.png', alt: 'Очиститель воздуха' },
@@ -202,7 +202,7 @@ export const products: Product[] = [
     shortDescription:
       'Мясорубка и овощерезка в одном корпусе. 2500 Вт перекручивают до 2,5 кг мяса в минуту, реверс выручает, если шнек забился.',
     price: 36990,
-    kaspiUrl: 'https://l.kaspi.kz/shop/5UbBqnh8HyEer8E',
+    kaspiUrl: 'https://kaspi.kz/shop/p/mjasorubka-ayora-ay-m1-seryi-chernyi-177134807',
     rating: 5,
     reviewsCount: 42,
     hero: { src: '/products/meat-grinder/1.jpg', alt: 'Электрическая мясорубка AYORA AY-M1' },
@@ -283,7 +283,7 @@ export const products: Product[] = [
       'Блендер 3 в 1: стеклянная чаша 1,5 л, кофемолка и дорожная бутылочка в комплекте. 1200 Вт и 20 000 об/мин.',
     price: 25990,
     kaspiUrl:
-      'https://kaspi.kz/shop/p/blender-statsionarnyi-ayora-ay-09-seryi-178239057/?c=750000000&m=30248238&ms=true',
+      'https://kaspi.kz/shop/p/blender-statsionarnyi-ayora-ay-09-seryi-178239057',
     rating: 5,
     reviewsCount: 19,
     hero: { src: '/products/blender-gray/1.jpg', alt: 'Стационарный блендер AYORA AY-09 серый' },
@@ -348,7 +348,7 @@ export const products: Product[] = [
       'Блендер 3 в 1: стеклянная чаша 1,5 л, кофемолка и дорожная бутылочка в комплекте. 1200 Вт и 20 000 об/мин.',
     price: 25990,
     kaspiUrl:
-      'https://kaspi.kz/shop/p/blender-statsionarnyi-ayora-ay-09-chernyi-178239081/?c=750000000&m=30248238&ms=true',
+      'https://kaspi.kz/shop/p/blender-statsionarnyi-ayora-ay-09-chernyi-178239081',
     rating: 5,
     reviewsCount: 19,
     hero: { src: '/products/blender-black/1.jpg', alt: 'Стационарный блендер AYORA AY-09 чёрный' },
