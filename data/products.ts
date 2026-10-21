@@ -18,10 +18,10 @@ export const products: Product[] = [
     hook: 'Отопление есть, а дома холодно?',
     shortDescription:
       'Греет комнату и увлажняет воздух одновременно. Живое пламя камина — без дров и дыма.',
-    price: 25990,
+    price: 22990,
     kaspiUrl: 'https://l.kaspi.kz/shop/HwN9hYUgxrh4xHV',
     rating: 5,
-    reviewsCount: 67,
+    reviewsCount: 69,
     hero: { src: '/products/fan-heater/hero.png', alt: 'Обогреватель AYORA 2в1 с эффектом камина' },
     images: [
       { src: '/products/fan-heater/1.png', alt: 'Обогреватель AYORA 2в1 с эффектом камина' },
@@ -83,7 +83,7 @@ export const products: Product[] = [
     name: 'Очиститель воздуха AYORA',
     hook: 'Пыль, запахи, смог - очиститель уберёт',
     shortDescription: 'Очищает воздух от пыли, смога и запахов. Управление с телефона через Wi-Fi, работает тихо можно оставить на ночь.',
-    price: 69990,
+    price: 64990,
     kaspiUrl: 'https://l.kaspi.kz/shop/BwD43frT5HVpwdV',
     rating: 5,
     reviewsCount: 77,
@@ -201,7 +201,7 @@ export const products: Product[] = [
     hook: 'Домашний фарш без химии — за минуты',
     shortDescription:
       'Мясорубка и овощерезка в одном корпусе. 2500 Вт перекручивают до 2,5 кг мяса в минуту, реверс выручает, если шнек забился.',
-    price: 37990,
+    price: 36990,
     kaspiUrl: 'https://l.kaspi.kz/shop/5UbBqnh8HyEer8E',
     rating: 5,
     reviewsCount: 42,
@@ -281,7 +281,7 @@ export const products: Product[] = [
     hook: 'Смузи, соусы и коктейли — за секунды',
     shortDescription:
       'Блендер 3 в 1: стеклянная чаша 1,5 л, кофемолка и дорожная бутылочка в комплекте. 1200 Вт и 20 000 об/мин.',
-    price: 29990,
+    price: 25990,
     kaspiUrl:
       'https://kaspi.kz/shop/p/blender-statsionarnyi-ayora-ay-09-seryi-178239057/?c=750000000&m=30248238&ms=true',
     rating: 5,
@@ -346,7 +346,7 @@ export const products: Product[] = [
     hook: 'Смузи, соусы и коктейли — за секунды',
     shortDescription:
       'Блендер 3 в 1: стеклянная чаша 1,5 л, кофемолка и дорожная бутылочка в комплекте. 1200 Вт и 20 000 об/мин.',
-    price: 29990,
+    price: 25990,
     kaspiUrl:
       'https://kaspi.kz/shop/p/blender-statsionarnyi-ayora-ay-09-chernyi-178239081/?c=750000000&m=30248238&ms=true',
     rating: 5,
