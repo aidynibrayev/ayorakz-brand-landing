@@ -18,7 +18,7 @@ export const products: Product[] = [
     hook: 'Отопление есть, а дома холодно?',
     shortDescription:
       'Греет комнату и увлажняет воздух одновременно. Живое пламя камина — без дров и дыма.',
-    price: 22990,
+    price: 24990,
     kaspiUrl: 'https://kaspi.kz/shop/p/teploventiljator-ayora-ay-900-chernyi-171878025',
     rating: 5,
     reviewsCount: 69,
